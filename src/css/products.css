@@ -30,10 +30,14 @@
     height:auto;
     font-weight: 800;
     user-select: none;
-
+     color: whitesmoke;
+     background-color: black;
+     border-radius: 12px;
+        cursor: pointer;
 }
 
 .prd_footer button:hover{
-    background-color: black;
-    color: whitesmoke;
+   background-color: rgb(59, 59, 59);
+   
+    
 }

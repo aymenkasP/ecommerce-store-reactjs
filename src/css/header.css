@@ -37,19 +37,20 @@
     font-size: 12px;
 }
 
-.hdr_left img:hover {
-   background-color: rgb(252, 252, 252);
-   padding: 3px;
-   border-radius: 23px;
-}
 
 .hdr_right  {
     flex: 0.3;
     display: grid;
     place-items: center;
     
+    
 }
 .hdr_right img {
-    
     width:45%;
+}
+.hdr_right:hover,
+.hdr_left:hover {
+   background-color: rgba(255, 208, 0, 0.288); 
+   border-radius: 12px;
+   cursor: pointer;
 }

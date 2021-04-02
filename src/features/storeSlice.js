@@ -12,8 +12,8 @@ export const storeSlice = createSlice({
 
     reducers : {
         
-        addToCard : (state,action) => {
-            state.card.push(action)
+        addToCard : (state,payload) => {
+            state.card.push(payload)
         }
     }
 })
