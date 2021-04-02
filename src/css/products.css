@@ -1,0 +1,39 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.prd_category {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.prd_footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    border-radius: 25px;
+ 
+    
+}
+.prd_price {
+    
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    
+}
+.prd_footer button {
+    border: none;
+    padding: 5px;
+    height:auto;
+    font-weight: 800;
+    user-select: none;
+
+}
+
+.prd_footer button:hover{
+    background-color: black;
+    color: whitesmoke;
+}

@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 12px;
+    text-align: center;
+    background-color: whitesmoke;
+   border-radius: 12px;
+   position: fixed;
+   bottom: 720px;
+   left: 0;
+   height: 4rem;
+}
+
+.hdr_left {
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.hdr_center {
+   flex: 1;
+   display: grid;
+   place-items: center;
+   text-align: center;
+   font-weight: 900;
+   text-transform: uppercase;
+}
+
+.hdr_left  {
+    display: grid;
+    place-items: center;
+   flex: 0.3;
+}
+
+.hdr_left img {
+    width: 50%;
+    font-size: 12px;
+}
+
+.hdr_left img:hover {
+   background-color: rgb(252, 252, 252);
+   padding: 3px;
+   border-radius: 23px;
+}
+
+.hdr_right  {
+    flex: 0.3;
+    display: grid;
+    place-items: center;
+    
+}
+.hdr_right img {
+    
+    width:45%;
+}
