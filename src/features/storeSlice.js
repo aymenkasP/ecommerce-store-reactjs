@@ -2,7 +2,7 @@ import { createSlice  } from "@reduxjs/toolkit";
 
 
 
-export const idSlice = createSlice({
+export const storeSlice = createSlice({
     name : 'my_store',
     initialState : {
         products : [],
@@ -11,17 +11,7 @@ export const idSlice = createSlice({
     },
 
     reducers : {
-        increment : state => {
-            state.id += 1
-        },
-
-        decrement : state => {
-            state.id -=1
-        },
-        incrementByAmount :(state , action) => {
-                state.id = action.payload
-        },
-
+        
         addToCard : (state,action) => {
             state.card.push(action)
         }
@@ -29,11 +19,11 @@ export const idSlice = createSlice({
 })
 
 
-export const {increment , decrement , incrementByAmount , addToCard} = idSlice.actions;
-
-export const selectId = state => state.id.id ;
-export const selectCard = state => state.id.card;
-export const addProducts = state => state.id.products;
+export const { addToCard} = storeSlice.actions;
 
 
-export default idSlice.reducer
+export const selectCard = state => state.my_store.card;
+export const addProducts = state => state.my_store.products;
+
+
+export default storeSlice.reducer

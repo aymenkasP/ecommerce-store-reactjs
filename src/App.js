@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import { useEffect } from "react";
 import HomePage from './components/HomePage';
 import Header from './components/Header';
+import ShopingCard from './components/ShopingCard'
 
 
 
@@ -20,7 +22,18 @@ const [Products, setProducts] = useState([])
   return (
     <div className="App">
       <Header />
-      <HomePage data={Products} />
+      <Router>
+      <switch>
+        <Route exact path = "/">
+           <HomePage data={Products} />
+        </Route>
+        <Route path = "/">
+           <ShopingCard path="/card" />
+        </Route>
+      </switch>
+        
+      </Router>
+     
 
 
 
