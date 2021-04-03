@@ -3,7 +3,12 @@ import { useHistory } from 'react-router'
 import '../css/header.css'
 import HamburgerMenu from '../css/menu.png'
 import ShoppingCard from '../css/ShopingCard.svg'
+import {selectCard} from '../features/storeSlice'
+import { useSelector } from 'react-redux';
+
 export default function Header() {
+    const CardItems = useSelector(selectCard);
+    console.log(CardItems.length)
   const history = useHistory()
   
   function open(){
@@ -23,7 +28,10 @@ export default function Header() {
         <div className ="hdr_right" onClick={() => {
            open()
         }} >
-            <img src={ShoppingCard} alt="card_shopping" />
+            <img src={ShoppingCard}  alt="card_shopping" />
+            <span>
+                {CardItems.length == 0 ? '' : CardItems.length}
+            </span>
         </div>
                
         </div>
