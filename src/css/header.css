@@ -1,49 +1,36 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 0px 12px;
-    text-align: center;
     background-color: whitesmoke;
-   border-radius: 12px;
-   position: fixed;
-   bottom: 720px;
-   left: 0;
-   height: 4rem;
+    padding: 12px;
+    border-radius: 12px;
+    height: auto;
+    
+    left: 4.5%;
+    width: 90%;
+    top: 0;
+    position: sticky;
 }
 
-.hdr_left {
-    display: flex;
-    flex-direction: column;
-    
-   
-}
+
 .hdr_center {
    flex: 1;
-   display: grid;
-   place-items: center;
-   text-align: center;
    font-weight: 900;
    text-transform: uppercase;
 }
 
 .hdr_left  {
-    display: grid;
-    place-items: center;
    flex: 0.3;
 }
 
 .hdr_left img {
     width: 50%;
-    font-size: 12px;
+   
 }
 
 
 .hdr_right  {
     flex: 0.3;
-    display: grid;
-    place-items: center;
-    
-    
 }
 .hdr_right img {
     width:45%;
@@ -53,4 +40,20 @@
    background-color: rgba(255, 208, 0, 0.288); 
    border-radius: 12px;
    cursor: pointer;
+}
+
+
+
+
+.hdr_left ,.hdr_center ,.hdr_right {
+    display: grid;
+    place-items: center;
+}
+
+
+.hdr_left img ,
+.hdr_right img
+{
+    max-width: 50px;
+    max-height: 50px;
 }

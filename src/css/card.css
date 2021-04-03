@@ -1,0 +1,32 @@
+
+ .card {
+     display: flex;
+     margin-bottom: 12px;
+ }
+.crd_left {
+    flex: 0.2;
+}
+.crd_center {
+    flex: 0.9;
+    padding: 3px;
+}
+
+.crd_right {
+    flex: 0.3;
+}
+.crd_left img {
+   
+  width: 100%;
+  height: 80%;
+
+}
+
+
+
+
+.crd_center ,
+.crd_left ,
+.crd_right  {
+    display: grid;
+    place-items: center;
+}

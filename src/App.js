@@ -5,14 +5,14 @@ import { useEffect } from "react";
 import HomePage from './components/HomePage';
 import Header from './components/Header';
 import ShopingCard from './components/ShopingCard'
-
+import './css/app.css'
 
 
 function App() {
 const [Products, setProducts] = useState([])
   useEffect(() =>{
     const getData = async () => {
-         const result = await axios('https://fakestoreapi.com/products?limit=5');
+         const result = await axios('https://fakestoreapi.com/products');
           setProducts(result.data)
          
     }

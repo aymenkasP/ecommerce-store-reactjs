@@ -1,6 +1,9 @@
 .products {
     display: flex;
     flex-direction: column;
+    
+    
+    
     margin: 5%;
 }
 
@@ -30,14 +33,28 @@
     height:auto;
     font-weight: 800;
     user-select: none;
-     color: whitesmoke;
-     background-color: black;
-     border-radius: 12px;
-        cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 .prd_footer button:hover{
    background-color: rgb(59, 59, 59);
    
     
+}
+
+
+
+@media only screen and (min-width: 640px) {
+    .products{
+        justify-content: space-between;
+         max-height: 700px;
+        width: 260px;
+    }
+    .products img {
+        max-height: 300Px;
+        
+    }
 }
