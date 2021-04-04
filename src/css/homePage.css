@@ -6,7 +6,7 @@
 @media only screen and (min-width: 640px) {
         .home_Page{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             flex-direction: row;
             flex-wrap: wrap;
             margin: 0px 100px;

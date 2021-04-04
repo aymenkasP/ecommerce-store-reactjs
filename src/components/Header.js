@@ -3,12 +3,14 @@ import { useHistory } from 'react-router'
 import '../css/header.css'
 import HamburgerMenu from '../css/menu.png'
 import ShoppingCard from '../css/ShopingCard.svg'
-import {selectCard} from '../features/storeSlice'
-import { useSelector } from 'react-redux';
+import {selectCard ,selectSideBar ,ShowSideBzr} from '../features/storeSlice'
+import { useSelector ,useDispatch } from 'react-redux';
+import SideBar from './SideBar'
 
 export default function Header() {
     const CardItems = useSelector(selectCard);
-    console.log(CardItems.length)
+    const sideBar = useSelector(selectSideBar)
+    const dispatch = useDispatch()
   const history = useHistory()
   
   function open(){
@@ -16,7 +18,9 @@ export default function Header() {
   }
     return (
         <div className ="header">
-        <div className="hdr_left" >
+        <div className="hdr_left" onClick={()=> {
+            dispatch(ShowSideBzr())
+        }} >
         <img  src={HamburgerMenu} alt='hamburger' />
         
         </div>
@@ -30,10 +34,14 @@ export default function Header() {
         }} >
             <img src={ShoppingCard}  alt="card_shopping" />
             <span>
-                {CardItems.length == 0 ? '' : CardItems.length}
+                {CardItems.length === 0 ? '' : CardItems.length}
             </span>
         </div>
-               
+       {
+        sideBar && <SideBar /> 
+       }
+        
+        
         </div>
     )
 }

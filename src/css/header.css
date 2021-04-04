@@ -1,15 +1,16 @@
 .header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
     background-color: whitesmoke;
     padding: 12px;
     border-radius: 12px;
-    height: auto;
+    
     
     left: 4.5%;
     width: 90%;
     top: 0;
-    position: sticky;
+    
 }
 
 
@@ -33,7 +34,7 @@
     flex: 0.3;
 }
 .hdr_right img {
-    width:45%;
+    height:55%;
 }
 .hdr_right:hover,
 .hdr_left:hover {
@@ -45,7 +46,7 @@
 
 
 
-.hdr_left ,.hdr_center ,.hdr_right {
+.hdr_left ,.hdr_center ,.hdr_right  {
     display: grid;
     place-items: center;
 }
@@ -57,3 +58,4 @@
     max-width: 50px;
     max-height: 50px;
 }
+

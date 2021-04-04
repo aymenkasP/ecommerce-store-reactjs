@@ -6,17 +6,22 @@ import HomePage from './components/HomePage';
 import Header from './components/Header';
 import ShopingCard from './components/ShopingCard'
 import './css/app.css'
+import SideBar from './components/SideBar';
 
 
 function App() {
+const [isPending, setIsPending] = useState(true);
 const [Products, setProducts] = useState([])
   useEffect(() =>{
-    const getData = async () => {
+    setTimeout(()=>{
+       const getData = async () => {
          const result = await axios('https://fakestoreapi.com/products');
           setProducts(result.data)
-         
+          setIsPending(false)
     }
         getData() 
+    }, 2000)
+   
 }, [])
   
   return (
@@ -25,7 +30,10 @@ const [Products, setProducts] = useState([])
       
       <Switch>
         <Route exact path = "/">
-           <HomePage data={Products} />
+        {
+          isPending? <p className="loading">Loading...</p>
+          : <HomePage data={Products} />
+        }   
         </Route>
         <Route path = "/">
            <ShopingCard path="/card" />

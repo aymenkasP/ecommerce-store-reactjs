@@ -1,7 +1,7 @@
 
  .card {
      display: flex;
-    margin: 0px 12px 5px 25px;
+    
  }
 .crd_left {
     flex: 0.2;
