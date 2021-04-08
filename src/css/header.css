@@ -2,7 +2,16 @@
     width: 13%;
     min-width: 25px;
     max-width: 30px;
+    cursor: pointer;
+
 }
+
+.header img:hover {
+    margin-top: 3px;
+   border-bottom: 1px black solid;
+    
+}
+
 
 .header {
     position: sticky;

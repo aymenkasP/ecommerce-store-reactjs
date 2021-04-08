@@ -14,7 +14,7 @@
 
 }
     
-.sd__item {
+.sd__items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -40,34 +40,12 @@
     display: grid;
     place-items: center;
 }
-
-
-/* .sd_bar{
-   
-    display: flex;
-    justify-content: space-around;
-    text-transform: capitalize;
+.sd__item {
     padding: 12px;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 90px;
-    width: 90%;
-    left: -2.3%;
-    background-color: black;
     border-radius: 12px;
-    color: aliceblue;
-    margin-bottom: 12px;
-    
+    cursor: pointer;
 }
-
-
-
-
-@media only screen and (max-width: 560px) {
-    .sd_bar{
-        display: grid;
-        place-items: center;
-      
-    }
-   
-} */
+.sd__item:hover {
+    background-color: whitesmoke;
+    color: black;
+}

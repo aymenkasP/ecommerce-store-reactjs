@@ -1,23 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import '../css/card.css'
-export default function Card({info}) {
+import { selectTotPrice, totPriceFun ,totPriceFunEdit } from '../features/storeSlice';
+export default function Card({ info }) {
+    const [itemQuantity, setItemQuantity] = useState(1)
+    console.log(itemQuantity)
+    const totalItemPrice = itemQuantity * info.price;
+    
+
+    const totprice = useSelector(selectTotPrice)
+    const dispatch = useDispatch()
+    const [onClickLimit, setOnClickLimit] = useState(true)
+
+    
+
+    
     return (
         <div className='card'>
 
-        <div className="crd_left">
-       
-                <img src={info.image} alt={info.title} />
-         
-        </div>
-            <div className="crd_center">
-                {info.title}
-            </div>
+                {/* card body */}
+            <div className='card__body'>
 
-            <div className="crd_right" >
+                    {/* card img */}
+                <div className="crd_left">
+                    <img src={info.image} alt={info.title} />
+                </div>
+
+
+                    {/* center card */}
+                <div className="crd_center">
+
+                        {/* card title */}
+                    <div className='card__item__title' >
+                        {info.title}
+                    </div>
+
+                            {/* card Quantity */}
+                    <div className='crd__item__quantity'>
+                        <input type='Number' value={itemQuantity} onChange={(e) => { setItemQuantity(e.target.value) }} />
+                         <button  onClick={() => { onClickLimit?dispatch(totPriceFun(totalItemPrice))  setOnClickLimit(false)  :dispatch(totPriceFunEdit(totalItemPrice)) && setItemQuantity(true)
+                             }} > {onClickLimit?"add" : "update"}  </button> 
+                    </div>
+                </div>
+                
+
+                    {/* info price */}
+                <div className="crd_right" >
                     {info.price}
+                    <span> full price {totalItemPrice.toFixed(3)} </span>
+                </div>
+
             </div>
-        
-            
         </div>
     )
 }

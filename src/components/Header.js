@@ -12,7 +12,7 @@ export default function Header() {
     const sideBar = useSelector(selectSideBar)
     const dispatch = useDispatch()
     const history = useHistory()
-
+    console.log('rendring heder')
 
 
     /* open the cart list function */
