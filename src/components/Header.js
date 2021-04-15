@@ -28,8 +28,8 @@ export default function Header() {
         <div className="header">
 
             {/* nav bar  */}
-            <div className='nav__bar'>
-                { sideBar && <SideBar /> }
+            <div className='nav__bar' className ={sideBar?'dspFlex':'dspNone'} >
+                 <SideBar /> 
             </div>
 
 

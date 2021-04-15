@@ -38,8 +38,7 @@ export default function Card({ info }) {
                             {/* card Quantity */}
                     <div className='crd__item__quantity'>
                         <input type='Number' value={itemQuantity} onChange={(e) => { setItemQuantity(e.target.value) }} />
-                         <button  onClick={() => { onClickLimit?dispatch(totPriceFun(totalItemPrice))  setOnClickLimit(false)  :dispatch(totPriceFunEdit(totalItemPrice)) && setItemQuantity(true)
-                             }} > {onClickLimit?"add" : "update"}  </button> 
+                         <button > add  </button> 
                     </div>
                 </div>
                 

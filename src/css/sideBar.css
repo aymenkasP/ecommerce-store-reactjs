@@ -1,6 +1,6 @@
 
 .sd_bar {
-    display: flex;
+    
     flex-direction: column;
     position: absolute;
     top: 65px;
@@ -11,7 +11,18 @@
     padding: 19px;
     border-radius: 0px 12px 12px 0px;
     box-shadow: 0 8px 6px -6px black;
+   
+    
 
+}
+
+.dspFlex {
+    display: flex;
+}
+
+.dspNone {
+    display: none;
+    
 }
     
 .sd__items {
@@ -34,6 +45,7 @@
     border-radius: 12px;
     width: 12%;
     padding: 10px;
+    
 }
 
 .sd__qut__icon {
@@ -48,4 +60,5 @@
 .sd__item:hover {
     background-color: whitesmoke;
     color: black;
+   
 }
