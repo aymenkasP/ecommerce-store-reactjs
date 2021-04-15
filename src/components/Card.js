@@ -6,15 +6,18 @@ export default function Card({ info }) {
     const [itemQuantity, setItemQuantity] = useState(1)
  
      
-
     const totalItemPrice = itemQuantity * info.price;
     
 
     const totprice = useSelector(selectTotPrice)
     const dispatch = useDispatch()
-    const [onClickLimit, setOnClickLimit] = useState(true)
 
-  
+
+  useEffect(()=> {
+    
+   dispatch(totPriceFun(totalItemPrice ))
+     } ,[totalItemPrice])
+
 
     
     return (
@@ -37,36 +40,17 @@ export default function Card({ info }) {
                         {info.title}
                     </div>
 
-                            {/* card Quantity */}
-                    <div className='crd__item__quantity'>
-                        <input type='Number' value={itemQuantity} onChange={(e) => { setItemQuantity(e.target.value) }} />
-                         <button onClick={() => {
-
-                                
-                                dispatch(totPriceFun(totalItemPrice))
-                             
-                             
-                              
-                              
-                              }} > add  </button> 
-
-                              <button  onClick={()=> {
-                                   dispatch(totPriceFunEdit(totalItemPrice))
-                                   dispatch(totPriceFun(totalItemPrice))
-                                   }}>
-                                  updite
-                              </button>
-                    </div>
-                </div>
+                      
+                   
                 
 
                     {/* info price */}
                 <div className="crd_right" >
                     {info.price}
-                    <span> full price {totalItemPrice.toFixed(3)} </span>
                 </div>
 
             </div>
+        </div>
         </div>
     )
 }

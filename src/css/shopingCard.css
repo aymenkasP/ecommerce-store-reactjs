@@ -9,6 +9,8 @@
 
 .shp__footer {
     background-color:whitesmoke;
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
 
 }
@@ -17,5 +19,19 @@
     background-color: rgb(103, 248, 103);
     border-radius: 3px;
     padding: 12px;
+
+}
+
+.checkout {
+    
+    border: none;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.checkout:hover {
+    background-color: rgb(22, 22, 22);
 
 }
