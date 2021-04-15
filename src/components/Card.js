@@ -4,7 +4,9 @@ import '../css/card.css'
 import { selectTotPrice, totPriceFun ,totPriceFunEdit } from '../features/storeSlice';
 export default function Card({ info }) {
     const [itemQuantity, setItemQuantity] = useState(1)
-    console.log(itemQuantity)
+ 
+     
+
     const totalItemPrice = itemQuantity * info.price;
     
 
@@ -12,7 +14,7 @@ export default function Card({ info }) {
     const dispatch = useDispatch()
     const [onClickLimit, setOnClickLimit] = useState(true)
 
-    
+  
 
     
     return (
@@ -38,7 +40,22 @@ export default function Card({ info }) {
                             {/* card Quantity */}
                     <div className='crd__item__quantity'>
                         <input type='Number' value={itemQuantity} onChange={(e) => { setItemQuantity(e.target.value) }} />
-                         <button > add  </button> 
+                         <button onClick={() => {
+
+                                
+                                dispatch(totPriceFun(totalItemPrice))
+                             
+                             
+                              
+                              
+                              }} > add  </button> 
+
+                              <button  onClick={()=> {
+                                   dispatch(totPriceFunEdit(totalItemPrice))
+                                   dispatch(totPriceFun(totalItemPrice))
+                                   }}>
+                                  updite
+                              </button>
                     </div>
                 </div>
                 

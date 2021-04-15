@@ -8,7 +8,7 @@ export const storeSlice = createSlice({
         products : [],
         card : {
             items :[],
-            totPrice :0
+            totPrice :[]
 
         } ,
         sideBar : false,
@@ -33,10 +33,14 @@ export const storeSlice = createSlice({
         },
 
         totPriceFun : (stats , action) => {
-            stats.card.totPrice += action.payload
+            stats.card.totPrice.push(action.payload)
         },
         totPriceFunEdit : (stats , action) => {
-            stats.card.totPrice -= action.payload
+
+          let pos =  stats.card.totPrice.indexOf(action.payload)
+          console.log(pos)
+            stats.card.totPrice.splice(pos , 1)
+
         }
 
     }

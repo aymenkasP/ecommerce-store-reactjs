@@ -18,15 +18,9 @@ export default function ShopingCard() {
         }
 
 
-      <div className="crt__footer" >
-      test
-                {
-                 totePrice
-                 
-                 
-                
-
-                } 
+      <div className="shp__footer" >
+        <p className='tote' > Tot <span> {totePrice.reduce((cv ,pv) => Number(cv) + Number(pv) , 0 ).toFixed(3)}</span> </p>
+               
                  {/* .toFixed(3) */}
       </div>
                

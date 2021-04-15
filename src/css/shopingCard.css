@@ -6,3 +6,16 @@
     
     
 }
+
+.shp__footer {
+    background-color:whitesmoke;
+    padding: 20px;
+
+}
+
+.shp__footer span , .tote {
+    background-color: rgb(103, 248, 103);
+    border-radius: 3px;
+    padding: 12px;
+
+}
